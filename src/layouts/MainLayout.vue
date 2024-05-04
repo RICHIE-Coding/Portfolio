@@ -1,22 +1,23 @@
 <template>
   <q-layout view="hHh lpR fFf">
-    <q-header class="q-pa-lg" elevated>
+    <q-header class="q-pa-lg" elevated style="z-index: 500">
       <q-toolbar>
         <q-btn class="menu" dense flat icon="menu" @click="toggleLeftDrawer" />
 
         <q-toolbar-title class="text-h3 text-center">
           PORTFOLIO
         </q-toolbar-title>
-      </q-toolbar> </q-header
-    ><q-drawer
+      </q-toolbar>
+    </q-header>
+    <q-drawer
       v-model="leftDrawerOpen"
       behavior="desktop"
       persistent
-      overlay
       side="left"
+      content-style="z-index: 500;"
     >
+      <div class="bg-primary">xysdsd</div>
     </q-drawer>
-
     <q-page-container>
       <router-view />
     </q-page-container>
