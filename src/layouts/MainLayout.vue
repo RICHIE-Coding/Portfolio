@@ -16,7 +16,7 @@
       side="left"
       content-style="z-index: 500;"
     >
-      <div class="bg-primary">xysdsd</div>
+      <navbar-content />
     </q-drawer>
     <q-page-container>
       <router-view />
@@ -25,6 +25,7 @@
 </template>
 
 <script setup scoped lang="ts">
+import NavbarContent from 'src/components/NavbarContent.vue';
 import { onBeforeUnmount, onMounted, ref } from 'vue';
 import { useQuasar } from 'quasar';
 const $q = useQuasar();
