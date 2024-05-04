@@ -44,7 +44,7 @@
     "yarn": ">= 1.21.1"
   },
   "lint-staged": {
-    "src/**/*.{js,ts,scss,vue,html,css}": "prettier --write",
+    "src/**/*.{js,ts,scss,vue,html,css}": "prettier --write \"**/*.{js,ts,vue,scss,html,md,json}\" --ignore-path .gitignore",
     "src/**/*.{js,ts,vue}": "eslint --fix"
   }
 }
