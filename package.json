@@ -14,6 +14,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@iconify/json": "^2.2.206",
     "@quasar/extras": "^1.16.4",
     "pinia": "^2.0.11",
     "quasar": "^2.8.0",
@@ -22,6 +23,7 @@
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
+    "@iconify/vue": "^4.1.2",
     "@intlify/vite-plugin-vue-i18n": "^3.3.1",
     "@quasar/app-vite": "^1.8.0",
     "@types/node": "^12.20.21",

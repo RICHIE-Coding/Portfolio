@@ -10,8 +10,8 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title class="text-h3 text-center">
-          PORTFOLIO
+        <q-toolbar-title class="text-h1 q-pa-sm text-center">
+          richiecoding.de
         </q-toolbar-title>
       </q-toolbar>
     </q-header>

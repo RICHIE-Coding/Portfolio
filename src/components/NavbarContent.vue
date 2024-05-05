@@ -31,7 +31,7 @@ const menu = routes.at(0)?.children?.map((item) => {
 </script>
 <style scoped lang="scss">
 :deep(.q-item) {
-  font-size: 1.9rem;
+  font-size: 2.5rem;
   color: white;
 
   &:after {
@@ -66,7 +66,7 @@ const menu = routes.at(0)?.children?.map((item) => {
 }
 
 .active-class:not(:has(~ :hover)) {
-  background-color: $yellow-12;
+  background-color: #00ff00;
   color: black !important;
 }
 

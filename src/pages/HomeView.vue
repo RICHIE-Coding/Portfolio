@@ -1,8 +1,11 @@
 <template>
   <div>
-    <Typewriter />
+    <TypeWriter />
+
+    <TechnologyDescription />
   </div>
 </template>
 <script setup lang="ts">
-import Typewriter from 'src/components/TypeWriter.vue';
+import TypeWriter from 'src/components/TypeWriter.vue';
+import TechnologyDescription from 'src/components/TechnologyDescription.vue';
 </script>
