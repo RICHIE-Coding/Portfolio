@@ -1,16 +1,17 @@
 <template>
   <q-list>
     <q-item
-      v-for="item in routes[0].children"
-      v-bind:key="item.name"
+      v-for="item in menu"
+      v-bind:key="item"
       clickable
       v-ripple
-      :active="item.name === route.name"
-      :to="item.name === 'Home' ? '/' : item.name"
+      :active="item === route.name"
+      active-class="bg-primary text-white"
+      :to="item === 'Home' ? '/' : item"
     >
       <q-item-section>
-        <q-item-label>
-          {{ item.name }}
+        <q-item-label class="text-center">
+          {{ item }}
         </q-item-label>
       </q-item-section>
     </q-item>
@@ -22,4 +23,19 @@ import routes from '../router/routes';
 import { useRoute } from 'vue-router';
 
 const route = useRoute();
+
+const menu = routes.at(0)?.children?.map((item) => {
+  return item.name;
+});
 </script>
+<style scoped lang="scss">
+.q-item__section {
+  font-size: 1.9rem;
+
+  color: white;
+}
+
+.q-list {
+  margin-top: 120px;
+}
+</style>
