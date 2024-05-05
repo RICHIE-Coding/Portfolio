@@ -2,7 +2,13 @@
   <q-layout view="hHh lpR fFf">
     <q-header class="q-pa-lg" style="z-index: 500">
       <q-toolbar>
-        <q-btn class="menu" dense flat icon="menu" @click="toggleLeftDrawer" />
+        <q-btn
+          class="menu"
+          dense
+          flat
+          :icon="leftDrawerOpen ? 'close' : 'menu'"
+          @click="toggleLeftDrawer"
+        />
 
         <q-toolbar-title class="text-h3 text-center">
           PORTFOLIO
