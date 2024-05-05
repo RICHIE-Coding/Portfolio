@@ -24,7 +24,7 @@
   </q-layout>
 </template>
 
-<script setup scoped lang="ts">
+<script setup lang="ts">
 import NavbarContent from 'src/components/NavbarContent.vue';
 import { onBeforeUnmount, onMounted, ref } from 'vue';
 import { useQuasar } from 'quasar';

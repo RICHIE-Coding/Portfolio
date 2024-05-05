@@ -29,12 +29,12 @@ const menu = routes.at(0)?.children?.map((item) => {
 });
 </script>
 <style scoped lang="scss">
-:deep(.q-item__section) {
+:deep(.q-item) {
   font-size: 1.9rem;
   color: white;
 
   &:after {
-    background-color: yellow;
+    background-color: $yellow-12;
 
     content: '';
     display: block;
@@ -57,13 +57,16 @@ const menu = routes.at(0)?.children?.map((item) => {
   &:hover {
     color: black;
   }
+
+  &:not(.active-class):hover ~ .active-class {
+    background-color: $bg-Navbar !important;
+    color: white !important;
+  }
 }
 
-.active-class {
+.active-class:not(:has(~ :hover)) {
   background-color: $yellow-12;
-  .q-item__section {
-    color: black !important;
-  }
+  color: black !important;
 }
 
 .q-list {
