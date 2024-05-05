@@ -50,7 +50,7 @@ const menu = routes.at(0)?.children?.map((item) => {
     z-index: -1;
   }
 
-  &:hover::after {
+  &:not(.active-class):hover::after {
     transform: translate(0, 0);
   }
 
@@ -59,7 +59,7 @@ const menu = routes.at(0)?.children?.map((item) => {
   }
 }
 
-:deep(.active-class) {
+.active-class {
   background-color: $yellow-12;
   .q-item__section {
     color: black !important;
