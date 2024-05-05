@@ -6,7 +6,7 @@
       clickable
       v-ripple
       :active="item === route.name"
-      active-class="bg-primary text-white"
+      active-class="active-class"
       :to="item === 'Home' ? '/' : item"
     >
       <q-item-section>
@@ -29,10 +29,41 @@ const menu = routes.at(0)?.children?.map((item) => {
 });
 </script>
 <style scoped lang="scss">
-.q-item__section {
+:deep(.q-item__section) {
   font-size: 1.9rem;
-
   color: white;
+
+  &:after {
+    background-color: yellow;
+
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-100%, 0) rotate(10deg);
+    transform-origin: top left;
+    transition: 0.2s transform ease-out;
+    will-change: transform;
+    z-index: -1;
+  }
+
+  &:hover::after {
+    transform: translate(0, 0);
+  }
+
+  &:hover {
+    color: black;
+  }
+}
+
+:deep(.active-class) {
+  background-color: $yellow-12;
+  .q-item__section {
+    color: black !important;
+  }
 }
 
 .q-list {
