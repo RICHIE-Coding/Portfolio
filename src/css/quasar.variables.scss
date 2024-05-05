@@ -24,5 +24,13 @@ $negative: #c10015;
 $info: #31ccec;
 $warning: #f2c037;
 
-$bg-Navbar: #1f2937;
+$bg-Navbar: #0a192f;
 $breakpoint-lg-min: 1440px;
+
+.body.body--dark {
+  background-color: $bg-Navbar !important;
+}
+
+.q-page-container {
+  background-color: $bg-Navbar !important;
+}

@@ -5,9 +5,13 @@
 }
 
 .q-drawer {
-  background-color: $bg-Navbar;
+  background-color: $bg-Navbar !important;
 }
 
-q-page-container {
-  background-color: red;
+body {
+  background-color: $bg-Navbar !important;
+}
+
+.q-page-container {
+  background-color: $bg-Navbar !important;
 }
